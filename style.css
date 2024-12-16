@@ -1,0 +1,55 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "menu header"
+        "menu content"
+        "menu footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    grid-area: menu;
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin: 10px 0;
+}
+
+header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+main {
+    grid-area: content;
+    padding: 20px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #2d2d2d;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
